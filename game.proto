@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+message SessionRequest {
+    required string username = 1;
+    required string password = 2;
+}
+
+message SessionGrant {
+    required string uuid = 1;
+    optional string reason = 2;
+}
+
+service Session {
+    rpc NewSession(SessionRequest) returns(SessionGrant);
+}
