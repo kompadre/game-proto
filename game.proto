@@ -13,7 +13,9 @@ message SessionGrant {
     string reason = 2;
 }
 
-message LookAroundRequest {}
+message LookAroundRequest {
+    string uuid = 1;
+}
 message LookAroundAnswer {
     repeated Object results = 1;
 }
@@ -26,6 +28,6 @@ message Object {
 
 
 service Session {
-    rpc NewSession(stream SessionRequest) returns(stream SessionGrant);
-    rpc LookAround(LookAroundRequest) returns(LookAroundAnswer);
+    rpc NewSession(SessionRequest) returns(SessionGrant);
+    rpc LookAround(stream LookAroundRequest) returns(stream LookAroundAnswer);
 }
