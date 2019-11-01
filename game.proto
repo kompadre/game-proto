@@ -1,15 +1,31 @@
-syntax = "proto2";
+syntax = "proto3";
+
+package gameproto.v1;
+option go_package = "proto";
 
 message SessionRequest {
-    required string username = 1;
-    required string password = 2;
+    string username = 1;
+    string password = 2;
 }
 
 message SessionGrant {
-    required string uuid = 1;
-    optional string reason = 2;
+    string uuid = 1;
+    string reason = 2;
 }
 
+message LookAroundRequest {}
+message LookAroundAnswer {
+    repeated Object results = 1;
+}
+
+message Object {
+    string uuid = 1;
+    int32 x = 2;
+    int32 y = 3;
+}
+
+
 service Session {
-    rpc NewSession(SessionRequest) returns(SessionGrant);
+    rpc NewSession(stream SessionRequest) returns(stream SessionGrant);
+    rpc LookAround(LookAroundRequest) returns(LookAroundAnswer);
 }
