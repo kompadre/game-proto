@@ -14,18 +14,28 @@ message SessionGrant {
 }
 
 message LookAroundRequest {
-    string uuid = 1;
+    string myuuid = 1;
+    string otheruuid = 2;
+    bool tellmemore = 3;
 }
+
 message LookAroundAnswer {
     repeated Object results = 1;
+}
+
+message ObjectAttribute {
+    string name = 1;
+    string currentvalue = 2;
+    string targetvalue = 3;
+    int32 ttl = 4;
 }
 
 message Object {
     string uuid = 1;
     int32 x = 2;
     int32 y = 3;
+    repeated ObjectAttribute attributes = 4;
 }
-
 
 service Session {
     rpc NewSession(SessionRequest) returns(SessionGrant);
