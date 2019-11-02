@@ -13,14 +13,22 @@ message SessionGrant {
     string reason = 2;
 }
 
+enum Types {
+    SYSTEM = 0;
+    MAP = 1;
+    CHAT = 2;
+    OTHER = 99;
+}
+
 message LookAroundRequest {
     string myuuid = 1;
     string otheruuid = 2;
-    bool tellmemore = 3;
+    Types type = 4;
 }
 
 message LookAroundAnswer {
     repeated Object results = 1;
+    Types type = 2;
 }
 
 message ObjectAttribute {
