@@ -23,7 +23,7 @@ enum Types {
 message LookAroundRequest {
     string myuuid = 1;
     string otheruuid = 2;
-    Types type = 4;
+    Types type = 3;
 }
 
 message LookAroundAnswer {

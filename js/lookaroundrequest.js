@@ -109,17 +109,17 @@ proto.gameproto.v1.LookAroundRequest.prototype.setOtheruuid = function(value) {
 
 
 /**
- * optional Types type = 4;
+ * optional Types type = 3;
  * @return {!proto.gameproto.v1.Types}
  */
 proto.gameproto.v1.LookAroundRequest.prototype.getType = function() {
-  return /** @type {!proto.gameproto.v1.Types} */ (jspb.Message.getFieldProto3(this, 4, 0));
+  return /** @type {!proto.gameproto.v1.Types} */ (jspb.Message.getFieldProto3(this, 3, 0));
 };
 
 
 /** @param {!proto.gameproto.v1.Types} value  */
 proto.gameproto.v1.LookAroundRequest.prototype.setType = function(value) {
-  jspb.Message.setField(this, 4, value);
+  jspb.Message.setField(this, 3, value);
 };
 
 
