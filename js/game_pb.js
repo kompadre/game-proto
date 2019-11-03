@@ -29,50 +29,50 @@ goog.exportSymbol('proto.gameproto.v1.SessionRequest', null, global);
  * @constructor
  */
 proto.gameproto.v1.SessionRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.gameproto.v1.SessionRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.gameproto.v1.SessionRequest.displayName = 'proto.gameproto.v1.SessionRequest';
+    proto.gameproto.v1.SessionRequest.displayName = 'proto.gameproto.v1.SessionRequest';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.gameproto.v1.SessionRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.gameproto.v1.SessionRequest.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.gameproto.v1.SessionRequest.prototype.toObject = function(opt_includeInstance) {
+        return proto.gameproto.v1.SessionRequest.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.gameproto.v1.SessionRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.gameproto.v1.SessionRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    username: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    password: jspb.Message.getFieldWithDefault(msg, 2, "")
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.gameproto.v1.SessionRequest} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.gameproto.v1.SessionRequest.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            username: jspb.Message.getFieldWithDefault(msg, 1, ""),
+            password: jspb.Message.getFieldWithDefault(msg, 2, "")
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -82,9 +82,9 @@ proto.gameproto.v1.SessionRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.gameproto.v1.SessionRequest}
  */
 proto.gameproto.v1.SessionRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.gameproto.v1.SessionRequest;
-  return proto.gameproto.v1.SessionRequest.deserializeBinaryFromReader(msg, reader);
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.gameproto.v1.SessionRequest;
+    return proto.gameproto.v1.SessionRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -96,26 +96,26 @@ proto.gameproto.v1.SessionRequest.deserializeBinary = function(bytes) {
  * @return {!proto.gameproto.v1.SessionRequest}
  */
 proto.gameproto.v1.SessionRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setUsername(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setPassword(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUsername(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPassword(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -124,9 +124,9 @@ proto.gameproto.v1.SessionRequest.deserializeBinaryFromReader = function(msg, re
  * @return {!Uint8Array}
  */
 proto.gameproto.v1.SessionRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.gameproto.v1.SessionRequest.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+    var writer = new jspb.BinaryWriter();
+    proto.gameproto.v1.SessionRequest.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -138,21 +138,21 @@ proto.gameproto.v1.SessionRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.gameproto.v1.SessionRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getUsername();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getPassword();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
+    var f = undefined;
+    f = message.getUsername();
+    if (f.length > 0) {
+        writer.writeString(
+            1,
+            f
+        );
+    }
+    f = message.getPassword();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
 };
 
 
@@ -161,13 +161,13 @@ proto.gameproto.v1.SessionRequest.serializeBinaryToWriter = function(message, wr
  * @return {string}
  */
 proto.gameproto.v1.SessionRequest.prototype.getUsername = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.SessionRequest.prototype.setUsername = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+    jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -176,13 +176,13 @@ proto.gameproto.v1.SessionRequest.prototype.setUsername = function(value) {
  * @return {string}
  */
 proto.gameproto.v1.SessionRequest.prototype.getPassword = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.SessionRequest.prototype.setPassword = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -198,50 +198,50 @@ proto.gameproto.v1.SessionRequest.prototype.setPassword = function(value) {
  * @constructor
  */
 proto.gameproto.v1.SessionGrant = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.gameproto.v1.SessionGrant, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.gameproto.v1.SessionGrant.displayName = 'proto.gameproto.v1.SessionGrant';
+    proto.gameproto.v1.SessionGrant.displayName = 'proto.gameproto.v1.SessionGrant';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.gameproto.v1.SessionGrant.prototype.toObject = function(opt_includeInstance) {
-  return proto.gameproto.v1.SessionGrant.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.gameproto.v1.SessionGrant.prototype.toObject = function(opt_includeInstance) {
+        return proto.gameproto.v1.SessionGrant.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.gameproto.v1.SessionGrant} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.gameproto.v1.SessionGrant.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    uuid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    reason: jspb.Message.getFieldWithDefault(msg, 2, "")
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.gameproto.v1.SessionGrant} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.gameproto.v1.SessionGrant.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            uuid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+            reason: jspb.Message.getFieldWithDefault(msg, 2, "")
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -251,9 +251,9 @@ proto.gameproto.v1.SessionGrant.toObject = function(includeInstance, msg) {
  * @return {!proto.gameproto.v1.SessionGrant}
  */
 proto.gameproto.v1.SessionGrant.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.gameproto.v1.SessionGrant;
-  return proto.gameproto.v1.SessionGrant.deserializeBinaryFromReader(msg, reader);
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.gameproto.v1.SessionGrant;
+    return proto.gameproto.v1.SessionGrant.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -265,26 +265,26 @@ proto.gameproto.v1.SessionGrant.deserializeBinary = function(bytes) {
  * @return {!proto.gameproto.v1.SessionGrant}
  */
 proto.gameproto.v1.SessionGrant.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setUuid(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setReason(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUuid(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setReason(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -293,9 +293,9 @@ proto.gameproto.v1.SessionGrant.deserializeBinaryFromReader = function(msg, read
  * @return {!Uint8Array}
  */
 proto.gameproto.v1.SessionGrant.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.gameproto.v1.SessionGrant.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+    var writer = new jspb.BinaryWriter();
+    proto.gameproto.v1.SessionGrant.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -307,21 +307,21 @@ proto.gameproto.v1.SessionGrant.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.gameproto.v1.SessionGrant.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getUuid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getReason();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
+    var f = undefined;
+    f = message.getUuid();
+    if (f.length > 0) {
+        writer.writeString(
+            1,
+            f
+        );
+    }
+    f = message.getReason();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
 };
 
 
@@ -330,13 +330,13 @@ proto.gameproto.v1.SessionGrant.serializeBinaryToWriter = function(message, writ
  * @return {string}
  */
 proto.gameproto.v1.SessionGrant.prototype.getUuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.SessionGrant.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+    jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -345,13 +345,13 @@ proto.gameproto.v1.SessionGrant.prototype.setUuid = function(value) {
  * @return {string}
  */
 proto.gameproto.v1.SessionGrant.prototype.getReason = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.SessionGrant.prototype.setReason = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -367,51 +367,51 @@ proto.gameproto.v1.SessionGrant.prototype.setReason = function(value) {
  * @constructor
  */
 proto.gameproto.v1.LookAroundRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.gameproto.v1.LookAroundRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.gameproto.v1.LookAroundRequest.displayName = 'proto.gameproto.v1.LookAroundRequest';
+    proto.gameproto.v1.LookAroundRequest.displayName = 'proto.gameproto.v1.LookAroundRequest';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.gameproto.v1.LookAroundRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.gameproto.v1.LookAroundRequest.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.gameproto.v1.LookAroundRequest.prototype.toObject = function(opt_includeInstance) {
+        return proto.gameproto.v1.LookAroundRequest.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.gameproto.v1.LookAroundRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.gameproto.v1.LookAroundRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    myuuid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    otheruuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    tellmemore: jspb.Message.getFieldWithDefault(msg, 3, false)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.gameproto.v1.LookAroundRequest} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.gameproto.v1.LookAroundRequest.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            myuuid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+            otheruuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
+            tellmemore: jspb.Message.getFieldWithDefault(msg, 3, false)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -421,9 +421,9 @@ proto.gameproto.v1.LookAroundRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.gameproto.v1.LookAroundRequest}
  */
 proto.gameproto.v1.LookAroundRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.gameproto.v1.LookAroundRequest;
-  return proto.gameproto.v1.LookAroundRequest.deserializeBinaryFromReader(msg, reader);
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.gameproto.v1.LookAroundRequest;
+    return proto.gameproto.v1.LookAroundRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -435,30 +435,30 @@ proto.gameproto.v1.LookAroundRequest.deserializeBinary = function(bytes) {
  * @return {!proto.gameproto.v1.LookAroundRequest}
  */
 proto.gameproto.v1.LookAroundRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setMyuuid(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setOtheruuid(value);
+                break;
+            case 3:
+                var value = /** @type {boolean} */ (reader.readBool());
+                msg.setTellmemore(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMyuuid(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setOtheruuid(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setTellmemore(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -467,9 +467,9 @@ proto.gameproto.v1.LookAroundRequest.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.gameproto.v1.LookAroundRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.gameproto.v1.LookAroundRequest.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+    var writer = new jspb.BinaryWriter();
+    proto.gameproto.v1.LookAroundRequest.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -481,28 +481,28 @@ proto.gameproto.v1.LookAroundRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.gameproto.v1.LookAroundRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getMyuuid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getOtheruuid();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getTellmemore();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
+    var f = undefined;
+    f = message.getMyuuid();
+    if (f.length > 0) {
+        writer.writeString(
+            1,
+            f
+        );
+    }
+    f = message.getOtheruuid();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+    f = message.getTellmemore();
+    if (f) {
+        writer.writeBool(
+            3,
+            f
+        );
+    }
 };
 
 
@@ -511,13 +511,13 @@ proto.gameproto.v1.LookAroundRequest.serializeBinaryToWriter = function(message,
  * @return {string}
  */
 proto.gameproto.v1.LookAroundRequest.prototype.getMyuuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.LookAroundRequest.prototype.setMyuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+    jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -526,13 +526,13 @@ proto.gameproto.v1.LookAroundRequest.prototype.setMyuuid = function(value) {
  * @return {string}
  */
 proto.gameproto.v1.LookAroundRequest.prototype.getOtheruuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.LookAroundRequest.prototype.setOtheruuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -543,13 +543,13 @@ proto.gameproto.v1.LookAroundRequest.prototype.setOtheruuid = function(value) {
  * @return {boolean}
  */
 proto.gameproto.v1.LookAroundRequest.prototype.getTellmemore = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 3, false));
+    return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 3, false));
 };
 
 
 /** @param {boolean} value */
 proto.gameproto.v1.LookAroundRequest.prototype.setTellmemore = function(value) {
-  jspb.Message.setProto3BooleanField(this, 3, value);
+    jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
@@ -565,11 +565,11 @@ proto.gameproto.v1.LookAroundRequest.prototype.setTellmemore = function(value) {
  * @constructor
  */
 proto.gameproto.v1.LookAroundAnswer = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.gameproto.v1.LookAroundAnswer.repeatedFields_, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, proto.gameproto.v1.LookAroundAnswer.repeatedFields_, null);
 };
 goog.inherits(proto.gameproto.v1.LookAroundAnswer, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.gameproto.v1.LookAroundAnswer.displayName = 'proto.gameproto.v1.LookAroundAnswer';
+    proto.gameproto.v1.LookAroundAnswer.displayName = 'proto.gameproto.v1.LookAroundAnswer';
 }
 /**
  * List of repeated fields within this message type.
@@ -581,41 +581,41 @@ proto.gameproto.v1.LookAroundAnswer.repeatedFields_ = [1];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.gameproto.v1.LookAroundAnswer.prototype.toObject = function(opt_includeInstance) {
-  return proto.gameproto.v1.LookAroundAnswer.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.gameproto.v1.LookAroundAnswer.prototype.toObject = function(opt_includeInstance) {
+        return proto.gameproto.v1.LookAroundAnswer.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.gameproto.v1.LookAroundAnswer} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.gameproto.v1.LookAroundAnswer.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    resultsList: jspb.Message.toObjectList(msg.getResultsList(),
-    proto.gameproto.v1.Object.toObject, includeInstance)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.gameproto.v1.LookAroundAnswer} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.gameproto.v1.LookAroundAnswer.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            resultsList: jspb.Message.toObjectList(msg.getResultsList(),
+                proto.gameproto.v1.Object.toObject, includeInstance)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -625,9 +625,9 @@ proto.gameproto.v1.LookAroundAnswer.toObject = function(includeInstance, msg) {
  * @return {!proto.gameproto.v1.LookAroundAnswer}
  */
 proto.gameproto.v1.LookAroundAnswer.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.gameproto.v1.LookAroundAnswer;
-  return proto.gameproto.v1.LookAroundAnswer.deserializeBinaryFromReader(msg, reader);
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.gameproto.v1.LookAroundAnswer;
+    return proto.gameproto.v1.LookAroundAnswer.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -639,23 +639,23 @@ proto.gameproto.v1.LookAroundAnswer.deserializeBinary = function(bytes) {
  * @return {!proto.gameproto.v1.LookAroundAnswer}
  */
 proto.gameproto.v1.LookAroundAnswer.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = new proto.gameproto.v1.Object;
+                reader.readMessage(value, proto.gameproto.v1.Object.deserializeBinaryFromReader);
+                msg.addResults(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.gameproto.v1.Object;
-      reader.readMessage(value,proto.gameproto.v1.Object.deserializeBinaryFromReader);
-      msg.addResults(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -664,9 +664,9 @@ proto.gameproto.v1.LookAroundAnswer.deserializeBinaryFromReader = function(msg, 
  * @return {!Uint8Array}
  */
 proto.gameproto.v1.LookAroundAnswer.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.gameproto.v1.LookAroundAnswer.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+    var writer = new jspb.BinaryWriter();
+    proto.gameproto.v1.LookAroundAnswer.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -678,15 +678,15 @@ proto.gameproto.v1.LookAroundAnswer.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.gameproto.v1.LookAroundAnswer.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getResultsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.gameproto.v1.Object.serializeBinaryToWriter
-    );
-  }
+    var f = undefined;
+    f = message.getResultsList();
+    if (f.length > 0) {
+        writer.writeRepeatedMessage(
+            1,
+            f,
+            proto.gameproto.v1.Object.serializeBinaryToWriter
+        );
+    }
 };
 
 
@@ -695,14 +695,14 @@ proto.gameproto.v1.LookAroundAnswer.serializeBinaryToWriter = function(message, 
  * @return {!Array<!proto.gameproto.v1.Object>}
  */
 proto.gameproto.v1.LookAroundAnswer.prototype.getResultsList = function() {
-  return /** @type{!Array<!proto.gameproto.v1.Object>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.gameproto.v1.Object, 1));
+    return /** @type{!Array<!proto.gameproto.v1.Object>} */ (
+        jspb.Message.getRepeatedWrapperField(this, proto.gameproto.v1.Object, 1));
 };
 
 
 /** @param {!Array<!proto.gameproto.v1.Object>} value */
 proto.gameproto.v1.LookAroundAnswer.prototype.setResultsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 1, value);
+    jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -712,12 +712,12 @@ proto.gameproto.v1.LookAroundAnswer.prototype.setResultsList = function(value) {
  * @return {!proto.gameproto.v1.Object}
  */
 proto.gameproto.v1.LookAroundAnswer.prototype.addResults = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.gameproto.v1.Object, opt_index);
+    return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.gameproto.v1.Object, opt_index);
 };
 
 
 proto.gameproto.v1.LookAroundAnswer.prototype.clearResultsList = function() {
-  this.setResultsList([]);
+    this.setResultsList([]);
 };
 
 
@@ -733,52 +733,52 @@ proto.gameproto.v1.LookAroundAnswer.prototype.clearResultsList = function() {
  * @constructor
  */
 proto.gameproto.v1.ObjectAttribute = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.gameproto.v1.ObjectAttribute, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.gameproto.v1.ObjectAttribute.displayName = 'proto.gameproto.v1.ObjectAttribute';
+    proto.gameproto.v1.ObjectAttribute.displayName = 'proto.gameproto.v1.ObjectAttribute';
 }
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.gameproto.v1.ObjectAttribute.prototype.toObject = function(opt_includeInstance) {
-  return proto.gameproto.v1.ObjectAttribute.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.gameproto.v1.ObjectAttribute.prototype.toObject = function(opt_includeInstance) {
+        return proto.gameproto.v1.ObjectAttribute.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.gameproto.v1.ObjectAttribute} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.gameproto.v1.ObjectAttribute.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    currentvalue: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    targetvalue: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    ttl: jspb.Message.getFieldWithDefault(msg, 4, 0)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.gameproto.v1.ObjectAttribute} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.gameproto.v1.ObjectAttribute.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+            currentvalue: jspb.Message.getFieldWithDefault(msg, 2, ""),
+            targetvalue: jspb.Message.getFieldWithDefault(msg, 3, ""),
+            ttl: jspb.Message.getFieldWithDefault(msg, 4, 0)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -788,9 +788,9 @@ proto.gameproto.v1.ObjectAttribute.toObject = function(includeInstance, msg) {
  * @return {!proto.gameproto.v1.ObjectAttribute}
  */
 proto.gameproto.v1.ObjectAttribute.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.gameproto.v1.ObjectAttribute;
-  return proto.gameproto.v1.ObjectAttribute.deserializeBinaryFromReader(msg, reader);
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.gameproto.v1.ObjectAttribute;
+    return proto.gameproto.v1.ObjectAttribute.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -802,34 +802,34 @@ proto.gameproto.v1.ObjectAttribute.deserializeBinary = function(bytes) {
  * @return {!proto.gameproto.v1.ObjectAttribute}
  */
 proto.gameproto.v1.ObjectAttribute.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setName(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setCurrentvalue(value);
+                break;
+            case 3:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setTargetvalue(value);
+                break;
+            case 4:
+                var value = /** @type {number} */ (reader.readInt32());
+                msg.setTtl(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCurrentvalue(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTargetvalue(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setTtl(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -838,9 +838,9 @@ proto.gameproto.v1.ObjectAttribute.deserializeBinaryFromReader = function(msg, r
  * @return {!Uint8Array}
  */
 proto.gameproto.v1.ObjectAttribute.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.gameproto.v1.ObjectAttribute.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+    var writer = new jspb.BinaryWriter();
+    proto.gameproto.v1.ObjectAttribute.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -852,35 +852,35 @@ proto.gameproto.v1.ObjectAttribute.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.gameproto.v1.ObjectAttribute.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getCurrentvalue();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getTargetvalue();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getTtl();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
-  }
+    var f = undefined;
+    f = message.getName();
+    if (f.length > 0) {
+        writer.writeString(
+            1,
+            f
+        );
+    }
+    f = message.getCurrentvalue();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+    f = message.getTargetvalue();
+    if (f.length > 0) {
+        writer.writeString(
+            3,
+            f
+        );
+    }
+    f = message.getTtl();
+    if (f !== 0) {
+        writer.writeInt32(
+            4,
+            f
+        );
+    }
 };
 
 
@@ -889,13 +889,13 @@ proto.gameproto.v1.ObjectAttribute.serializeBinaryToWriter = function(message, w
  * @return {string}
  */
 proto.gameproto.v1.ObjectAttribute.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.ObjectAttribute.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+    jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -904,13 +904,13 @@ proto.gameproto.v1.ObjectAttribute.prototype.setName = function(value) {
  * @return {string}
  */
 proto.gameproto.v1.ObjectAttribute.prototype.getCurrentvalue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.ObjectAttribute.prototype.setCurrentvalue = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+    jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -919,13 +919,13 @@ proto.gameproto.v1.ObjectAttribute.prototype.setCurrentvalue = function(value) {
  * @return {string}
  */
 proto.gameproto.v1.ObjectAttribute.prototype.getTargetvalue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.ObjectAttribute.prototype.setTargetvalue = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+    jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -934,13 +934,13 @@ proto.gameproto.v1.ObjectAttribute.prototype.setTargetvalue = function(value) {
  * @return {number}
  */
 proto.gameproto.v1.ObjectAttribute.prototype.getTtl = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {number} value */
 proto.gameproto.v1.ObjectAttribute.prototype.setTtl = function(value) {
-  jspb.Message.setProto3IntField(this, 4, value);
+    jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -956,11 +956,11 @@ proto.gameproto.v1.ObjectAttribute.prototype.setTtl = function(value) {
  * @constructor
  */
 proto.gameproto.v1.Object = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.gameproto.v1.Object.repeatedFields_, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, proto.gameproto.v1.Object.repeatedFields_, null);
 };
 goog.inherits(proto.gameproto.v1.Object, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.gameproto.v1.Object.displayName = 'proto.gameproto.v1.Object';
+    proto.gameproto.v1.Object.displayName = 'proto.gameproto.v1.Object';
 }
 /**
  * List of repeated fields within this message type.
@@ -972,44 +972,44 @@ proto.gameproto.v1.Object.repeatedFields_ = [4];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.gameproto.v1.Object.prototype.toObject = function(opt_includeInstance) {
-  return proto.gameproto.v1.Object.toObject(opt_includeInstance, this);
-};
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.gameproto.v1.Object.prototype.toObject = function(opt_includeInstance) {
+        return proto.gameproto.v1.Object.toObject(opt_includeInstance, this);
+    };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.gameproto.v1.Object} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.gameproto.v1.Object.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    uuid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    x: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    y: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    attributesList: jspb.Message.toObjectList(msg.getAttributesList(),
-    proto.gameproto.v1.ObjectAttribute.toObject, includeInstance)
-  };
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.gameproto.v1.Object} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.gameproto.v1.Object.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            uuid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+            x: jspb.Message.getFieldWithDefault(msg, 2, 0),
+            y: jspb.Message.getFieldWithDefault(msg, 3, 0),
+            attributesList: jspb.Message.toObjectList(msg.getAttributesList(),
+                proto.gameproto.v1.ObjectAttribute.toObject, includeInstance)
+        };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
 }
 
 
@@ -1019,9 +1019,9 @@ proto.gameproto.v1.Object.toObject = function(includeInstance, msg) {
  * @return {!proto.gameproto.v1.Object}
  */
 proto.gameproto.v1.Object.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.gameproto.v1.Object;
-  return proto.gameproto.v1.Object.deserializeBinaryFromReader(msg, reader);
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.gameproto.v1.Object;
+    return proto.gameproto.v1.Object.deserializeBinaryFromReader(msg, reader);
 };
 
 
@@ -1033,35 +1033,35 @@ proto.gameproto.v1.Object.deserializeBinary = function(bytes) {
  * @return {!proto.gameproto.v1.Object}
  */
 proto.gameproto.v1.Object.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setUuid(value);
+                break;
+            case 2:
+                var value = /** @type {number} */ (reader.readInt32());
+                msg.setX(value);
+                break;
+            case 3:
+                var value = /** @type {number} */ (reader.readInt32());
+                msg.setY(value);
+                break;
+            case 4:
+                var value = new proto.gameproto.v1.ObjectAttribute;
+                reader.readMessage(value, proto.gameproto.v1.ObjectAttribute.deserializeBinaryFromReader);
+                msg.addAttributes(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
     }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUuid(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setX(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setY(value);
-      break;
-    case 4:
-      var value = new proto.gameproto.v1.ObjectAttribute;
-      reader.readMessage(value,proto.gameproto.v1.ObjectAttribute.deserializeBinaryFromReader);
-      msg.addAttributes(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
+    return msg;
 };
 
 
@@ -1070,9 +1070,9 @@ proto.gameproto.v1.Object.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.gameproto.v1.Object.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.gameproto.v1.Object.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
+    var writer = new jspb.BinaryWriter();
+    proto.gameproto.v1.Object.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
 };
 
 
@@ -1084,36 +1084,36 @@ proto.gameproto.v1.Object.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.gameproto.v1.Object.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getUuid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getX();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getY();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
-  f = message.getAttributesList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      4,
-      f,
-      proto.gameproto.v1.ObjectAttribute.serializeBinaryToWriter
-    );
-  }
+    var f = undefined;
+    f = message.getUuid();
+    if (f.length > 0) {
+        writer.writeString(
+            1,
+            f
+        );
+    }
+    f = message.getX();
+    if (f !== 0) {
+        writer.writeInt32(
+            2,
+            f
+        );
+    }
+    f = message.getY();
+    if (f !== 0) {
+        writer.writeInt32(
+            3,
+            f
+        );
+    }
+    f = message.getAttributesList();
+    if (f.length > 0) {
+        writer.writeRepeatedMessage(
+            4,
+            f,
+            proto.gameproto.v1.ObjectAttribute.serializeBinaryToWriter
+        );
+    }
 };
 
 
@@ -1122,13 +1122,13 @@ proto.gameproto.v1.Object.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.gameproto.v1.Object.prototype.getUuid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
 proto.gameproto.v1.Object.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+    jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1137,13 +1137,13 @@ proto.gameproto.v1.Object.prototype.setUuid = function(value) {
  * @return {number}
  */
 proto.gameproto.v1.Object.prototype.getX = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
 proto.gameproto.v1.Object.prototype.setX = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+    jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -1152,13 +1152,13 @@ proto.gameproto.v1.Object.prototype.setX = function(value) {
  * @return {number}
  */
 proto.gameproto.v1.Object.prototype.getY = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
 proto.gameproto.v1.Object.prototype.setY = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
+    jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -1167,14 +1167,14 @@ proto.gameproto.v1.Object.prototype.setY = function(value) {
  * @return {!Array<!proto.gameproto.v1.ObjectAttribute>}
  */
 proto.gameproto.v1.Object.prototype.getAttributesList = function() {
-  return /** @type{!Array<!proto.gameproto.v1.ObjectAttribute>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.gameproto.v1.ObjectAttribute, 4));
+    return /** @type{!Array<!proto.gameproto.v1.ObjectAttribute>} */ (
+        jspb.Message.getRepeatedWrapperField(this, proto.gameproto.v1.ObjectAttribute, 4));
 };
 
 
 /** @param {!Array<!proto.gameproto.v1.ObjectAttribute>} value */
 proto.gameproto.v1.Object.prototype.setAttributesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 4, value);
+    jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
 
@@ -1184,12 +1184,12 @@ proto.gameproto.v1.Object.prototype.setAttributesList = function(value) {
  * @return {!proto.gameproto.v1.ObjectAttribute}
  */
 proto.gameproto.v1.Object.prototype.addAttributes = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.gameproto.v1.ObjectAttribute, opt_index);
+    return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.gameproto.v1.ObjectAttribute, opt_index);
 };
 
 
 proto.gameproto.v1.Object.prototype.clearAttributesList = function() {
-  this.setAttributesList([]);
+    this.setAttributesList([]);
 };
 
 
