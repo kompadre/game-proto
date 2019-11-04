@@ -1,2 +1,2 @@
-# game-proto
+# φame-proto
 Game's proto
