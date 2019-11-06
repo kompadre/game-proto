@@ -89,17 +89,24 @@ message ActionRecord {
     ActionType action = 2;
 }
 
+message Ack{
+    bool success=1;
+}
+
+message Timestamp{
+    uint32 value =1;
+}
 
 service Session {
     rpc NewSession (SessionRequest) returns (SessionGrant);
     rpc LookAround (stream LookAroundRequest) returns (stream LookAroundAnswer);
-    rpc CommandSetRotation (Rotation) returns (bool);
-    rpc CommandSetMoveDirection (Rotation) returns (bool);
-    rpc CommandStartMove (uint32) returns (bool);
-    rpc CommandEndMove (uint32) returns (bool);
-    rpc CommandStartAction (ActionRecord) returns (bool);
-    rpc CommandEndAction (ActionRecord) returns (bool);
-    rpc GetEntitySkin (uint32) returns (EntitySkin);
-    rpc GetMotionState (uint32) returns (EntityMotionState);
-    rpc GetMotionStateStream (bool) returns (stream EntityMotionState);
+    rpc CommandSetRotation (Rotation) returns (Ack);
+    rpc CommandSetMoveDirection (Rotation) returns (Ack);
+    rpc CommandStartMove (Timestamp) returns (Ack);
+    rpc CommandEndMove (Timestamp) returns (Ack);
+    rpc CommandStartAction (ActionRecord) returns (Ack);
+    rpc CommandEndAction (ActionRecord) returns (Ack);
+    rpc GetEntitySkin (Timestamp) returns (EntitySkin);
+    rpc GetMotionState (Timestamp) returns (EntityMotionState);
+    rpc GetMotionStateStream (Timestamp) returns (stream EntityMotionState);
 }
