@@ -45,7 +45,51 @@ message Object {
     repeated ObjectAttribute attributes = 4;
 }
 
+message EntityCreated {
+    uint32 timestamp = 1;
+    uint32 id = 2;
+}
+
+message EntityDestroyed {
+    uint32 timestamp = 1;
+    uint32 id = 2;
+}
+
+message Vector2 {
+    float x = 1;
+    float y = 2;
+}
+
+message Rotation {
+    uint32 timestamp = 1;
+    float angle = 2;
+}
+
+message EntityMotionState {
+    uint32 timestamp = 0;
+    uint32 id = 1;
+    Vector2 position = 2;
+    float rotation = 3;
+    Vector2 velocity = 4;
+}
+
+enum ActionType {
+    FIRE_PRIMARY = 0;
+}
+
+message ActionRecord {
+    uint32 timestamp = 1;
+    ActionType action = 2;
+}
+
+
 service Session {
-    rpc NewSession(SessionRequest) returns(SessionGrant);
-    rpc LookAround(stream LookAroundRequest) returns(stream LookAroundAnswer);
+    rpc NewSession (SessionRequest) returns (SessionGrant);
+    rpc LookAround (stream LookAroundRequest) returns (stream LookAroundAnswer);
+    rpc CommandSetRotation (Rotation) returns (bool);
+    rpc CommandSetMoveDirection (Rotation) returns (bool);
+    rpc CommandStartMove (uint32) returns (bool);
+    rpc CommandEndMove (uint32) returns (bool);
+    rpc CommandStartAction (ActionRecord) returns (bool);
+    rpc CommandEndAction (ActionRecord) returns (bool);
 }
